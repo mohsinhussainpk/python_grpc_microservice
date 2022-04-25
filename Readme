@@ -1,0 +1,9 @@
+//Run these commands to run the backend microservice
+
+docker build . -f Dockerfile -t database_service
+
+docker run -p 127.0.0.1:50051:50051/tcp database_service
+
+//after running these commands run the client using the below command this will make a grpc request to the backend show results from mongodb database
+
+python client.py
