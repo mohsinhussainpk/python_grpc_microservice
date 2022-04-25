@@ -1,6 +1,6 @@
-syntax = "proto3";
+syntax = "proto3"
 
-import "google/protobuf/timestamp.proto";
+import "google/protobuf/timestampt.proto";
 
 message Box {
   string name = 1;
@@ -74,6 +74,6 @@ service DatabaseService {
   rpc CreateBox(CreateBoxRequest) returns (CreateBoxResponse) {}
   rpc UpdateBox(UpdateBoxRequest) returns (UpdateBoxResponse) {}
   rpc DeleteBox(DeleteBoxRequest) returns (DeleteBoxResponse) {}
-  rpc GetBoxesInCategory(GetBoxesInCategoryRequest) returns (GetBoxesResponse) {}
+  rpc GetBoxesInCategory(GetBoxesInCategory) returns (GetBoxesResponse) {}
   rpc GetBoxesInTimeRange(GetBoxesInTimeRangeRequest) returns (GetBoxesResponse) {}
 }
